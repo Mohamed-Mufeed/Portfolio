@@ -187,7 +187,7 @@ body {
   align-items: center;
   border-radius: 50%;
   text-align: center;
-
+  /* color: #8b5cf6 !important; */
   background-color: transparent;
   border: 1px solid #8b5cf6;
   width: 40px;
@@ -203,9 +203,9 @@ body {
 }
 
 .linkBtn:hover {
-  background-color: #8b5cf6;
+  background-color: #8b5cf6 !important;
 }
 
 .linkBtn:hover i {
-  color: #1e1e2f !important; /* override the global `*` rule */
+  color: #1e1e2f !important; 
 }
