@@ -3,6 +3,7 @@ import Footer from "./Footer.jsx"
 import { Banner, Resume, About } from "./Body.jsx"
 import Project from "./Project.jsx";
 import Contact from "./Contact.jsx";
+import Links from "./Links.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         </div>
       </div>
       <Contact />
+      <Links/>
       <Footer />
     </>
   );

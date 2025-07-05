@@ -1,3 +1,4 @@
+
 * {
   color: #e2e8f0;
 }
@@ -17,7 +18,7 @@ body {
 
 .leftFixed {
   width: 45%;
-  align-items: left;
+  /* align-items: left; */
   padding: 40px;
   position: fixed;
   left: 0;
@@ -59,7 +60,7 @@ body {
 
 
 .footer {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .outerBanner {
@@ -158,6 +159,7 @@ body {
 }
 
 .contactBtn {
+  display: inline-block;
   padding: 10px 15px;
   color: #1e1e2f;
   background-color: #8b5cf6;
@@ -170,4 +172,40 @@ body {
 .contactBtn:hover {
   background-color: #1e1e2f;
   color: #8b5cf6;
+}
+.socialLink{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+.linkBtn {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-align: center;
+
+  background-color: transparent;
+  border: 1px solid #8b5cf6;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.linkBtn i {
+  color: #8b5cf6;
+  transition: color 0.3s ease;
+}
+
+.linkBtn:hover {
+  background-color: #8b5cf6;
+}
+
+.linkBtn:hover i {
+  color: #1e1e2f !important; /* override the global `*` rule */
 }
