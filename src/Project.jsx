@@ -1,6 +1,6 @@
 function Project() {
     return (<>
-        <div className="projectDiv">
+        <div className="projectDiv" id="project">
             <h2>Projects</h2>
             <a href="https://mohamed-mufeed.neocities.org/calc">
                 <div className="project">

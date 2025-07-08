@@ -1,4 +1,4 @@
-import profile from "./assets/Mufeed-banner.png"
+// import profile from "./assets/Mufeed-banner.png"
 import CV from './assets/CV-updated.pdf'
 function Banner() {
     return (
@@ -17,8 +17,8 @@ function Banner() {
 function About() {
     return (
         <>
-            <div className="outerAbout">
-                <div className="about">
+            <div className="outerAbout" id="about">
+                <div className="about" >
                     <h2>About</h2>
                     <p>I'm currently studying Information Technology in St. Joseph's College of Engineering. I'm a web developer and a adaptive learner.</p>
                     <p>I've completed multiple front-end projects like portfolios, landing pages, and interactive web apps. I've also completed internships at companies like Codsoft and InternPe, where I built projects including a scientific calculator, e-commerce website, and a Connect Four game.

@@ -1,7 +1,7 @@
 function Contact() {
 
     return (<>
-        <div className="contact">
+        <div className="contact" id="contact">
             <h2>Be in touch</h2>
             <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=mufeed.n.357@gmail.com"
@@ -14,5 +14,6 @@ function Contact() {
         </div>
     </>);
 }
+
 
 export default Contact
