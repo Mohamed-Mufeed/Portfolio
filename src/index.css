@@ -1,14 +1,10 @@
-*{
-  scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 60px;
 }
+
 body {
   background-color: #1e1e2f;
-  /* background-image: url("./assets/bgImgNew.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
-  scroll-behavior: smooth;
 }
 
 .appContainer {
@@ -19,7 +15,6 @@ body {
   display: flex;
   justify-content: center;
   max-width: 45%;
-  /* align-items: left; */
   padding: 40px;
   position: fixed;
   left: 0;
@@ -29,13 +24,29 @@ body {
 }
 
 .rightScroll {
+  display: flex;
+  flex-direction: column;
   width: 55%;
   padding: 40px;
   margin-left: 45%;
-  /* scroll-behavior: smooth; */
+  gap: 50px;
+}
+/* .header .hamburger{
+  display: none;
+} */
+
+.hamburger.rotate{
+  transform: rotate(360deg);
+  transition: transform 0.5s ease-in-out;
 }
 
+.icon {
+
+  transition: transform 0.5s ease-in-out;
+  color: #e2e8f0;
+}
 .header {
+  margin-bottom: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -62,11 +73,12 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.header ul li a{
+.header ul li a {
   text-decoration: none;
   color: #e2e8f0;
 }
-.header ul li a:hover{
+
+.header ul li a:hover {
   color: #b494ff;
 }
 
@@ -74,6 +86,20 @@ body {
   margin-top: 50px;
   color: #e2e8f0;
 }
+
+.sticky-name {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #0f0f1c;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bold;
+  color: #8b5cf6;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
 
 .outerBanner {
   display: flex;
@@ -95,8 +121,6 @@ body {
 .outerAbout {
   display: flex;
   justify-content: center;
-  padding-top: 60px;
-  transition: 0.5s ease-in;
 }
 
 .about {
@@ -108,7 +132,6 @@ body {
 
 
 .resume {
-  padding: 50px;
   text-align: center;
   line-height: 3;
   font-family: Arial, Helvetica, sans-serif;
@@ -132,8 +155,62 @@ body {
   color: #8b5cf6;
 }
 
+
+.outerSkill {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e2e8f0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.skills {
+  display: grid;
+  place-items: center;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.skillText,
+.skillProgress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: 1/1;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.skillProgress {
+  display: block;
+  width: 100%;
+  height: 25px;
+  background-color:transparent;
+  border-radius: 16px;
+}
+
+.skillProgress div{
+  background-color: #8b5cf6;
+  opacity: 0;
+  height: 100%;
+  border-radius: 16px;
+  
+  transition: width 0.5s ease;
+}
+
+
+.skillText {
+  opacity: 1;
+}
+
+
 .projectDiv {
-  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -158,11 +235,12 @@ body {
   color: #e2e8f0;
 }
 
-.project{
+.project {
   animation: scalingUp;
   animation-timeline: view();
-  animation-range: entry 0% cover 50%;
+  animation-range: entry 0% cover 75%;
 }
+
 .project h3 {
   margin-bottom: 30px;
 }
@@ -184,7 +262,8 @@ body {
   line-height: 3;
   color: #e2e8f0;
   z-index: 2;
-transition: transform 0.3s ease;}
+  transition: transform 0.3s ease;
+}
 
 .contactBtn {
   display: inline-block;
@@ -203,12 +282,14 @@ transition: transform 0.3s ease;}
   background-color: #1e1e2f;
   color: #8b5cf6;
 }
-.socialLinks{
+
+.socialLinks {
   display: inline-flex;
   gap: 10px;
   padding: 20px;
   background-color: transparent;
 }
+
 .linkBtn {
   display: flex;
   justify-content: center;
@@ -224,46 +305,43 @@ transition: transform 0.3s ease;}
   z-index: 2;
 }
 
-.linkBtn .icons{
+.linkBtn .icons {
   color: #8b5cf6 !important;
   transition: color 0.3s ease;
   fill: #8b5cf6 !important;
 }
 
-.linkBtn i{
+.linkBtn i {
   color: #8b5cf6 !important;
   transition: color 0.3s ease;
   fill: #8b5cf6 !important;
 }
+
 .linkBtn:hover {
   background-color: #8b5cf6 !important;
 }
 
-.linkBtn:hover .icons{
-  color: #1e1e2f !important; 
+.linkBtn:hover .icons {
+  color: #1e1e2f !important;
   fill: #1e1e2f !important;
 }
 
-.linkBtn:hover i{
-  color: #1e1e2f !important; 
+.linkBtn:hover i {
+  color: #1e1e2f !important;
   fill: #1e1e2f !important;
 }
 
 
 /* Animations */
 
-@keyframes scalingUp{
-  from{
+@keyframes scalingUp {
+  from {
     transform: scale(0.05);
     filter: blur(7px);
   }
 
-  to{
+  to {
     transform: scale(1);
     filter: blur(0px);
   }
 }
-
-/* #about, #projects, #contact {
-  scroll-margin-top: 60px;
-} */
