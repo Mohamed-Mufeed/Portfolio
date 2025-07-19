@@ -77,38 +77,5 @@
 .skillContainer{
     width: 250px;
   }
-    /* 
-  .skills{
-    border: 1px solid black;
-  } */
 }
 
-/*   .hamburger {
-      width: 30px;
-      height: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      cursor: pointer;
-      z-index: 1001;
-    }
-
-    .hamburger span {
-      display: block;
-      height: 3px;
-      width: 100%;
-      background-color: white;
-      border-radius: 2px;
-      transition: 0.3s ease;
-    }
-
-    /* Transform into X 
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translateY(14px);
-    }
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translateY(-14px);
-    }*/

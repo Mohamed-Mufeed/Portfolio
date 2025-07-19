@@ -27,7 +27,7 @@ function Header() {
     return (
         <>
         <header>
-                <div className="header">
+                <div className="header"> 
                     <ul>
                         <li><a href="#about" onClick={handleScroll("about")} style={{ color: getColor("about") }}>About</a></li>
                         <li><a href="#skill" onClick={handleScroll("skill")} style={{ color: getColor("skill") }}>Skills</a></li>
@@ -35,8 +35,13 @@ function Header() {
                         <li><a href="#contact" onClick={handleScroll("contact")} style={{ color: getColor("contact") }}>Contact</a></li>
                     </ul>
                     
-                    <div className="hamburger" onClick={toggleMenu} style={{padding: "10px", paddingLeft: "20px"}}>
-                    {menu ? <FaTimes size={24} style={{color: "#e2e8f0", transform: "rotate("}}/> : <FaBars size={24} />}</div>
+                    <div className="hamburger " onClick={toggleMenu} style={{padding: "10px", paddingLeft: "20px", display: menu? "block" : "none"}}>
+                    {menu ? (
+                    <FaTimes size={24} className="icon" />
+                    ) : (
+                    <FaBars size={24} className="icon" />
+                    )}     
+                    </div>
 
                 </div>
         </header>
