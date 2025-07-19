@@ -6,7 +6,8 @@
   left: 0;
   top: 0;
   display: flex;
-  justify-content: start;
+  box-shadow: 0 5px 15px #00000059;
+  justify-content: center;
   z-index: 100;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -27,7 +28,13 @@
 
 
 @media screen and (max-width:431px){
- h2{
+ html{
+  scroll-padding-top: 60px;
+ }
+  .bannerLeft h1{
+  font-size: 25px;
+ }
+  h2{
   font-size:large ;
  }
  p{
@@ -38,7 +45,8 @@
  }
   .header{
     display: flex;
-    justify-content: left;
+    justify-content: start;
+    position: fixed;
   }
   .header ul{
     display: none;
@@ -46,14 +54,26 @@
   .header .hamburger{
     display: block;
   }
+  .appContainer{
+    display: flex;
+    flex-direction: column;
+  }
   .leftFixed{
-    display: none;
+    padding: 10px;
+    width: 100%;
+    position: static;
   }
   .rightScroll{
+    padding: 0px 0px;
     width: 100%;
     margin-left: 0;
     text-align: center;
   }
+
+  .mediaName{
+    display: block;
+  }
+
 .skillContainer{
     width: 100%;
   }
